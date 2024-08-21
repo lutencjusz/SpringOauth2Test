@@ -19,4 +19,9 @@ public class OAuthTestViewController {
     public String login() {
         return "custom-login";
     }
+
+    @GetMapping("/error")
+    public String error() {
+        return "error";
+    }
 }

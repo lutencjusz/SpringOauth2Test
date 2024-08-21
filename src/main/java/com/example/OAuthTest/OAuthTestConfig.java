@@ -16,7 +16,8 @@ public class OAuthTestConfig {
                 }).oauth2Login(oauth2login -> {
                     oauth2login
                             .loginPage("/login")
-                            .successHandler((request, response, authentication) -> response.sendRedirect("/profile"));
+                            .successHandler((request, response, authentication) -> response.sendRedirect("/profile"))
+                            .failureHandler((request, response, exception) -> response.sendRedirect("/error"));
                 })
                 .build();
     }

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Logowanie nieudane</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .error-container {
+            text-align: center;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            max-width: 400px;
+        }
+        .error-container h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: #dc3545;
+        }
+        .error-container p {
+            font-size: 18px;
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+        .error-container a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .error-container a:hover {
+            background-color: #0056b3;
+        }
+        .google-logo {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="error-container">
+    <img src="https://ssl.gstatic.com/images/branding/product/1x/gsa_64dp.png" alt="Google Logo" class="google-logo">
+    <h1>Oops!</h1>
+    <p>Coś poszło nie tak przy logowaniu się</p>
+    <p>Spróbuj jeszcze raz...</p>
+    <a th:href="@{/login}">Powtórne logowanie</a>
+</div>
+</body>
+</html>
